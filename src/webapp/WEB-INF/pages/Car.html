@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+
+<!-- Таблица для отображения машин -->
+<table border="1">
+    <thead>
+    <tr>
+        <th>make</th>
+        <th>model</th>
+        <th>year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Итерация по списку машин -->
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.make}">Lada</td>
+        <td th:text="${car.model}">Vesta</td>
+        <td th:text="${car.year}">2020</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
